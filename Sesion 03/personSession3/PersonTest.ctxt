@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=PersonTest
+comment0.text=\r\n\ The\ test\ class\ PersonTest.\r\n\r\n\ @author\ \ (Surya\ N.\ Stasiak\ Vega)\r\n\ @version\ (2025.09.25)\r\n
+comment1.params=
+comment1.target=void\ setAgeBelowLimit()
+comment1.text=\r\n\ caso\ 1\r\n
+comment2.params=
+comment2.target=void\ setAgeOverLimit()
+comment2.text=\r\n\ caso\ 2\r\n
+comment3.params=
+comment3.target=void\ setAgeOverrLimit()
+comment3.text=\r\n\ caso\ 3\r\n
+comment4.params=
+comment4.target=void\ setAgeInsideLimit()
+comment4.text=\r\n\ caso\ 4\r\n
+comment5.params=
+comment5.target=void\ setAgeBottomLimit()
+comment5.text=\r\n\ caso\ 2\r\n
+numComments=6
