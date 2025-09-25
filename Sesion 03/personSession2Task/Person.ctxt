@@ -1,0 +1,46 @@
+#BlueJ class context
+comment0.target=Person
+comment0.text=\n\ "Code\ is\ art\ and\ therefore\ should\ be\ interpretative\ and\ not\ documented"\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ -\ not\ Linus\ Torvalds\n
+comment1.params=
+comment1.target=Person()
+comment1.text=\n\ Constructor\ for\ objects\ of\ class\ Person,\ gives\ initial\ value\ to\ the\ object.\n\ \ \ \ \ \ |\n\ Se\ denomina\ "Constructor\ por\ defecto"\ pues\ no\ tiene\ parametros.\n
+comment10.params=
+comment10.target=void\ printAge()
+comment10.text=\n\ Muestra\ por\ consola\ una\ cadena\ con\ informacion\ sobre\ la\ edad\ de\ la\ persona.\n\n
+comment11.params=
+comment11.target=java.lang.String\ toString()
+comment11.text=\n\ Devuelve\ una\ cadena\ que\ contenga\ la\ informaci\u00F3n\ de\ un\ objeto\ persona.\n\ Para\ la\ propiedad\ gender\ debe\ mostrar\ el\ texto\ "masculino"\ o\ "femenino".\n\ \n\ @return\ la\ cadena\ con\ la\ representacion\ textual\ del\ objeto.\n
+comment12.params=
+comment12.target=int\ getCriticalAge()
+comment12.text=\n\ Devuelve\ un\ numero\ dependiendo\ de\ la\ edad\ de\ la\ persona\:\n\ \ -\ Si\ la\ persona\ tiene\ menos\ de\ 18\ a\u00F1os,\ devuelve\ los\ a\u00F1os\ que\ le\ quedan\ hasta\ los\ 18\n\ \ -\ Si\ la\ persona\ tiene\ entre\ 18\ y\ 65,\ los\ que\ le\ quedan\ para\ llegar\ a\ los\ 65\n\ \ -\ Si\ tiene\ mas\ de\ 65,\ los\ a\u00F1os\ que\ han\ trascurrido\ desde\ entonces\n\ \n\ @return\ la\ cantidad\ de\ a\u00F1os,\ en\ int\n
+comment13.params=
+comment13.target=java.lang.String\ genderToString()
+comment13.text=\n\ Devuelve\ el\ genero\ en\ forma\ de\ string.\n\ \n\ @return\ String\ "masculino"/"femenino"\n
+comment14.params=condition\ error_message
+comment14.target=void\ checkParam(boolean,\ java.lang.String)
+comment14.text=\n\ Se\ usa\ para\ validar\ parametros.\ Si\ no\ se\ cumple\ la\ condiciom,\n\ el\ parametro\ no\ es\ valido\ y\ se\n\ lanza\ una\ excepcion\ indicando\ el\ motivo\ del\ error.\n\ \n\ @param\ condition\ Condicion\ a\ evaluar\ (tipo\ boolean).\n\ @param\ error_message\ String\ con\ el\ mensaje\ de\ error.\n
+comment2.params=newAge
+comment2.target=void\ setAge(int)
+comment2.text=\n\ M\u00E9todo\ setAge,\ modifica\ la\ edad.\n\n\ @param\ newAge\ la\ nueva\ edad,\ ha\ de\ estar\ entre\ MIN_AGE\ y\ MAX_AGE.\n
+comment3.params=newName
+comment3.target=void\ setName(java.lang.String)
+comment3.text=\n\ Modifica\ o\ cambia\ el\ valor\ del\ nombre.\n\ \n\ @param\ newName\ El\ nuevo\ valor\ del\ nombre,\ ha\ de\ ser\ String\ no\ vacia.\n
+comment4.params=newSurname
+comment4.target=void\ setSurname(java.lang.String)
+comment4.text=\n\ Modifica\ el\ valor\ del\ apellido.\n\n\ @param\ newSurname\ El\ nuevo\ valor\ del\ apellido,\ ha\ de\ ser\ String\ no\ vacio.\n
+comment5.params=newGender
+comment5.target=void\ setGender(boolean)
+comment5.text=\n\ Modifica\ el\ valor\ del\ genero.\n\n\ @param\ newGender\ Boolean,\ true\ \=\ mujer,\ false\ \=\ hombre.\n
+comment6.params=
+comment6.target=java.lang.String\ getSurname()
+comment6.text=\n\ Retorna\ el\ valor\ del\ apellido.\n\n\ @return\ El\ apellido\ en\ forma\ de\ String.\n
+comment7.params=
+comment7.target=boolean\ getGender()
+comment7.text=\n\ Retorna\ el\ valor\ del\ genero.\n\n\ @return\ Booleano\ que\ representa\ el\ genero\:\ true\ \=\ mujer,\ false\ \=\ hombre\n
+comment8.params=
+comment8.target=int\ getAge()
+comment8.text=\n\ Retorna\ la\ edad.\n\n\ @return\ La\ edad\ en\ forma\ de\ int.\n
+comment9.params=
+comment9.target=java.lang.String\ getName()
+comment9.text=\n\ Retorna\ el\ valor\ del\ nombre.\n\n\ @return\ El\ nombre\ en\ forma\ de\ String.\n
+numComments=15
