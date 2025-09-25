@@ -162,5 +162,16 @@ public class PersonTest
       assertEquals(70 - 65, result);
     }
 
-
+    /**
+     * Tests for method getHashCode:
+     * cases:
+     * solo haremos un caso - Pedro Pascal, con 3 años.
+     */
+    @Test
+    public void getHashCodeTest() {
+        Person person1 = new Person(3, "Pedro", "Pascal", false);
+        String result = person1.getHashCode();
+        
+        assertEquals("3-PEDRO-5-PASCAL-6", result);
+    }
 }

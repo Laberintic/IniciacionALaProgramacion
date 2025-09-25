@@ -197,6 +197,16 @@ public class Person
         }
     }
     
+    public String getHashCode() {
+        return getAge() + "-"
+            + getName().toUpperCase() + "-"
+            + getName().length() + "-"
+            + getSurname().toUpperCase() + "-"
+            + getSurname().length();
+        // maybe its more efficient to store name and surname in varibales
+        // isntead of calling getName/Surname twice...
+    }
+    
     /**
      * Devuelve el genero en forma de string.
      * 
