@@ -1,28 +1,31 @@
 
 /**
- * Write a description of class Tree here.
+ * The class for the Tree object.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Surya N. Stasiak Vega
+ * @version 2025.09.26
  */
 public class Tree
 {
+    public static final int MAX_NUMBER_OF_FLOWERS = 12;
+    public static final int DEFAULT_NUMBER_OF_FLOWERS = 7;
+    public static final int DEFAULT_NUMBER_OF_FRUITS = 3;
+    public static final String DEFAULT_TYPE_OF_TREE = "Peral";
+
     // instance variables - replace the example below with your own
     private String typeOfTree;
-    private int maxNumberOfFlowers;
     private int numberOfFlowers;
     private int numberOfFruits;
 
+    
     /**
      * Constructor for objects of class Tree
      */
     public Tree()
     {
-        typeOfTree = "Manzano";
-        maxNumberOfFlowers = 25;
-        numberOfFlowers = 7;
-        numberOfFruits = 3;
-        
+        typeOfTree = DEFAULT_TYPE_OF_TREE;
+        numberOfFlowers = DEFAULT_NUMBER_OF_FLOWERS;
+        numberOfFruits = DEFAULT_NUMBER_OF_FRUITSº;
     }
     
     /**
@@ -40,25 +43,8 @@ public class Tree
      * @param name el tipo de arbol
      */
     public void setType(String treeName) {
+        checkParam(treeName != "", "String cant be empty");
         typeOfTree = treeName;
-    }
-    
-    /**
-     * Metodo get para el atributo numero maximo de flores
-     * 
-     * @returns numero maximo de floes (int)
-     */
-    public int getMaxFlowers() {
-        return maxNumberOfFlowers;
-    }
-    
-    /**
-     * Metodo set para el atributo numero maximo de flores
-     * 
-     * @param num cantidad maxima de flores (int)
-     */
-    public void setMaxFlowers(int num) {
-        maxNumberOfFlowers = num;
     }
     
     /**
@@ -76,7 +62,8 @@ public class Tree
      * @param num el numero de flores (int)
      */
     public void setFlowers(int num) {
-        numberOfFlowers = num;
+      checkParam(num >= 0, "Number cant be negative.");
+      numberOfFlowers = num;
     }
     
     /**
@@ -94,15 +81,61 @@ public class Tree
      * @param num numero de frutos
      */
     public void setFruits(int num) {
-        numberOfFruits = num;
+      checkParam(num >= 0, "Number cant be negative.");
+      numberOfFruits = num;
     }
     
     public String toString() {
-        return typeOfTree + "-" + maxNumberOfFlowers + "-" + numberOfFlowers + "-" +
+        return typeOfTree + "-" + MAX_NUMBER_OF_FLOWERS + "-" + numberOfFlowers + "-" +
                 numberOfFruits;
     }
     
     public void print() {
         System.out.println("Valores de las propiedades del arbol: " + toString());
     }
-}
+    
+    /**
+     * Will increment flowers unless already at the max; if flowers are at max, will decrement them and increment fruits, until those are at max.
+     */
+    public void water() {
+      int currentFlowers = getFlowers();
+      int currentFruits = getFruits();
+      if (currentFlowers < MAX_NUMBER_OF_FLOWERS) {
+        setFlowers(currentFlowers + 1);
+      }
+      else if (currentFruits < MAX_NUMBER_OF_FLOWERS) {
+        setFlowers(currentFlowers - 1);
+        setFruits(currentFruits - 1);
+      }
+    }
+
+    /**
+     * Decrements fruit number and returns the result.
+     *
+     * @return the number of fruits
+     */
+    public int gatherFruit() {
+      setFruits(getFruits() - 1);
+      return getFruits();
+    } 
+
+    /**
+     * Sets fruit number to 0 and returns the "harvested" fruits.
+     */
+    public int harvest() {
+      int currentFruits = getFruits();
+      setFruits(0);
+      return currentFruits;
+    }
+
+    /**
+     * checkParam will throw an error when a condition is false.
+     *
+     * @param contidion if false triggers an error
+     * @param errorMessage String with the error msg.
+     */
+    private void checkParam(boolean condition, String errorMessage) {
+      if (condition) return;
+      throw new RuntimeException(errorMessage);
+    }
+} 
